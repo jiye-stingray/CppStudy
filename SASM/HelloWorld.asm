@@ -1,5 +1,7 @@
+%include "io64.inc"
+
 section .text
-global main
+global CMAIN
 main:
     ;write your code here
     
