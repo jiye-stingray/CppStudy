@@ -22,16 +22,18 @@ LABEL_LOOP:
 
     ; 연습문제 1 에서 100까지의 합을 구하는 프로그램
     
-    mov eax, 0
-    mov ebx, 0
-LABEL_HAP:
-    add ebx , 1
-    add eax , ebx
-    cmp ebx, 100
-    jne LABEL_HAP
+    mov eax, 100    ; 최종 목적지
+    xor ebx, ebx      ; mov ebx,0 ebx: 결과물
+    xor ecx, ecx
     
-    PRINT_DEC 1, eax   
-    NEWLINE
+LABEL_SUM:
+    inc ecx     ; add ecx, 1과 동일
+    add ebx, ecx    ;
+    cmp ecx, eax
+    jne LABEL_SUM
+    
+    PRINT_DEC 4, ebx
+    NEWLINE   
     
     xor rax, rax
     ret
