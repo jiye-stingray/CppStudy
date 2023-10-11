@@ -24,12 +24,11 @@ LABEL_LOOP:
     
     mov eax, 100    ; 최종 목적지
     xor ebx, ebx      ; mov ebx,0 ebx: 결과물
-    xor ecx, ecx
     
 LABEL_SUM:
-    inc ecx     ; add ecx, 1과 동일
-    add ebx, ecx    ;
-    cmp ecx, eax
+    add ebx, eax    
+    dec eax
+    cmp eax, 0
     jne LABEL_SUM
     
     PRINT_DEC 4, ebx
