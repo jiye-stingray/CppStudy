@@ -34,6 +34,19 @@ LABEL_SUM:
     PRINT_DEC 4, ebx
     NEWLINE   
     
+    ; loop [라벨]
+    ; - ecx에 반복 횟수
+    ; - loop 할때마다 ecx 1 감소. 0이면 빠져나감. 아니면 라벨로 이동
+    
+    mov ecx, 100
+    xor ebx, ebx      ; mov ebx,0 ebx: 결과물
+LABEL_LOOP_SUM:
+    add ebx, ecx
+    loop LABEL_LOOP_SUM
+    
+    PRINT_DEC 4, ebx
+    NEWLINE   
+    
     xor rax, rax
     ret
     
