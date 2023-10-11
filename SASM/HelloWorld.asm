@@ -44,9 +44,30 @@ LABEL_EQUAL_END:
     PRINT_HEX 1, rcx
     NEWLINE
     
+    ; 연습문제 : 어떤 숫자가 (1~100)가 짝수면 1, 홀수면 0을 출력하는 프로그램을 만들어봐라
+    mov ax ,100
+    
+    ; 나누기 연산 
+    ; div reg
+    ; div bl => ax / bl (al몫 ah나머지)
+    
+    mov bl , 2
+    div bl
     
     
+    cmp ah, 0
+    je LABEL_JJACK
     
+    mov rbx, 0
+    jmp LABEL_HOL
+    
+    
+LABEL_JJACK:
+    mov rbx, 1
+LABEL_HOL:
+    
+    PRINT_HEX 1, rbx
+    NEWLINE
     
     xor rax, rax
     ret
