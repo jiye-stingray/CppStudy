@@ -4,48 +4,39 @@ section .text
 global CMAIN
 main:
     mov rbp, rsp; for correct debugging
+    mov rbp, rsp; for correct debugging
     
-   ; 반복문 (while for)
-   ; 특정 조건을 만족할때까지 반복해서 실행~ 
+    ; 배열과 주소
     
-   ; ex) Hello World를 10번 출력해야 한다면 ?
-   
-   mov ecx, 10
-   
-LABEL_LOOP:
-   PRINT_STRING msg
-   NEWLINE
-   dec ecx ; sub ecx, 1과 동일
-   cmp ecx,0
-   jne LABEL_LOOP
+    ; 배열 : 동일한 타입의 데이터 묶음 
+    ; - 배열을 구성하는 각 값을 배열 요소(element)라고 함
+    ; - 배열의 위치를 가리키는 숫자를 인덱스(index)라고 함
     
-
-    ; 연습문제 1 에서 100까지의 합을 구하는 프로그램
     
-    mov eax, 100    ; 최종 목적지
-    xor ebx, ebx      ; mov ebx,0 ebx: 결과물
+    ; 주소
+    ; [시작 주소 + 인덱스 * 크기]
     
-LABEL_SUM:
-    add ebx, eax    
-    dec eax
-    cmp eax, 0
-    jne LABEL_SUM
+    mov rax, a
     
-    PRINT_DEC 4, ebx
-    NEWLINE   
+    ; 연습 문제 : a 배열의 모든 데이터 출력해보기
     
-    ; loop [라벨]
-    ; - ecx에 반복 횟수
-    ; - loop 할때마다 ecx 1 감소. 0이면 빠져나감. 아니면 라벨로 이동
+    xor ecx, ecx
+LABEL_PRINT_A:
+    ;PRINT_HEX 1, [a + ecx]
+    ;NEWLINE 
+    inc ecx
+    cmp ecx, 5
+    jne LABEL_PRINT_A
     
-    mov ecx, 100
-    xor ebx, ebx      ; mov ebx,0 ebx: 결과물
-LABEL_LOOP_SUM:
-    add ebx, ecx
-    loop LABEL_LOOP_SUM
     
-    PRINT_DEC 4, ebx
-    NEWLINE   
+    xor ecx, ecx
+LABEL_PRINT_B:
+    PRINT_HEX 2, [b+ecx*2]
+    NEWLINE
+    inc ecx
+    cmp ecx, 5
+    jne LABEL_PRINT_B
+    
     
     xor rax, rax
     ret
@@ -57,9 +48,15 @@ LABEL_LOOP_SUM:
     
 section .data
     msg db 'Hello World', 0x00
+    a db 0x01, 0x02, 0x03, 0x04, 0x05 ; 5 * 1 = 5 바이트
+    
+    ; 0x0001    
+    b times 5 dw 1 ; 5 * 2 10 바이트 
+    
+    
     
     ; 초기화 되지 않은 데이터
     ; [변수이름] [크기] [개수]  
     ; [크기] resb(1) resw(2) resd(4) resq(8)
 section .bss
-    num resb 1
+    num resb 10 
