@@ -33,7 +33,6 @@ unsigned __int64 d;  // 8바이트(long long) (0 ~ 어마어마하게 크다)
 
 // 초기값이 0이거나, 초기값이 없는 변수라면 .bss 영역
 
-
 int main()
 {
     cout << "체력이 " << hp << " 남았습니다" << endl;

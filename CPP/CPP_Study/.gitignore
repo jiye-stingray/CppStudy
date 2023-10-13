@@ -34,7 +34,9 @@
 Browse.VC.*
 Browse.VC.db.*
 Debug/
+x64/
 .tlog
 .log
 .pdb
 .visdx
+/v17
