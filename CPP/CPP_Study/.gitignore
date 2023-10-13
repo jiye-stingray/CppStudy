@@ -33,5 +33,5 @@
 
 Browse.VC.*
 Browse.VC.db.*
-Debug.*
+Debug/
 .tlog
