@@ -36,3 +36,5 @@ Browse.VC.db.*
 Debug/
 .tlog
 .log
+.pdb
+.visdx
