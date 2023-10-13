@@ -32,5 +32,6 @@
 *.app
 
 Browse.VC.*
+Browse.VC.db.*
 Debug.*
 .tlog

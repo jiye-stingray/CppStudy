@@ -21,10 +21,10 @@ using namespace std;
 //0이 아닌 초기화 값이 있으면 .data 영역
 int hp = 100;
 
-char a;     // 1바이트 (-128~127)
-short b;    // 2바이트 (-32768~32767)
-int c;      // 4바이트 (-21.4억 ~ 21.4억)
-__int64 d;  // 8바이트(long long) (어마어마하게 크다)
+unsigned char a;     // 1바이트 (0 ~ 225)
+unsigned short b;    // 2바이트 (0 ~ 65536)
+unsigned int c;      // 4바이트 (0 ~ 42.9억)
+unsigned __int64 d;  // 8바이트(long long) (0 ~ 어마어마하게 크다)
 
 // 초기값이 0이거나, 초기값이 없는 변수라면 .bss 영역
 
