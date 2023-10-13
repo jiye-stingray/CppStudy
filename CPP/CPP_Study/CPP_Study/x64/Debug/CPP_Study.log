@@ -1,2 +1,9 @@
 ﻿  CPP_Study.cpp
-  CPP_Study.vcxproj -> C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\x64\Debug\CPP_Study.exe
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(29,15): error C2371: 'a': 재정의. 기본 형식이 다릅니다.
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(24,6): message : 'a' 선언을 참조하십시오.
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(30,16): error C2371: 'b': 재정의. 기본 형식이 다릅니다.
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(25,7): message : 'b' 선언을 참조하십시오.
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(31,14): error C2371: 'c': 재정의. 기본 형식이 다릅니다.
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(26,5): message : 'c' 선언을 참조하십시오.
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(32,18): error C2371: 'd': 재정의. 기본 형식이 다릅니다.
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(27,9): message : 'd' 선언을 참조하십시오.

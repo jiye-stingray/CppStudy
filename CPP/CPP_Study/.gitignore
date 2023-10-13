@@ -35,3 +35,4 @@ Browse.VC.*
 Browse.VC.db.*
 Debug/
 .tlog
+.log
