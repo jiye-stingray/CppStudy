@@ -43,9 +43,16 @@ int MultiplyBy(int a, int b)
 	return c;
 }
 
+// F5
+// F10
+// F11
 int main()
 {
-	int result = MultiplyBy(3,5);
+
+	int a = 3;
+	int b = 5;
+	int result = MultiplyBy(a,b);
+
 	PrintNumber(result);
 	//PrintHelloWorld();
 
