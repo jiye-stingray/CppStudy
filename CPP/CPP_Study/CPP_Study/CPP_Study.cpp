@@ -5,8 +5,28 @@ using namespace std;
 // 데이터를 가공하는 방법에 대해서 알아봅시다 
 
 unsigned char flag;		// 부호를 없애야 >> 를 하더라도 부호비트가 딸려오지 않음
+
+// 한번 정해지면 절대 바뀌지 않을 값들
+// constant의 약자인 const를 붙임 (변수를 상수화 한다고 함)
+// const를 붙였으면 초기값을 반드시 지정해야 함
+
+// const는 바뀌지 않는 읽기 전용
+// .rodata?
+// 사실 C++ 표준에서 꼭 그렇게 하라는 말이 없음
+// 그냥 컴파일러 (VS) 마음이라는 것 
+
+// [데이터 영역] 
+// .data (초기값 있는 경우)
+int a = 2;
+// .bss(초기값 없는 경우)
+int b;
+// .rodata( 읽기 전용 데이터)
+const char* msg = "Hello World";
 int main()
 {
+	// [스택 영역]
+	int c = 3;
+
 #pragma region 비트 연산
 
 	// 언제 필요한가? (사실 많이는 없음)
