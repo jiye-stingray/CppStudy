@@ -39,5 +39,6 @@ x64/
 .log
 .pdb
 .visdx
+.vs/*
 /v17
 FileContentIndex/*
