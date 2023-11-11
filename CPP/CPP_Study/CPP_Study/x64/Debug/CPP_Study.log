@@ -1,2 +1,3 @@
 ﻿  CPP_Study.cpp
+C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\CPP_Study\CPP_Study.cpp(48,15): warning C4101: 'pp2' :참조되지 않은 지역 변수입니다.
   CPP_Study.vcxproj -> C:\Users\asus\Documents\GitHub\CppStudy\CPP\CPP_Study\x64\Debug\CPP_Study.exe
